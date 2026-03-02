@@ -5,7 +5,7 @@ export const siteProfile = {
   phone: "7363008628",
   whatsappUrl: "https://wa.me/917363008628",
   email: "debojyoti.bme@gmail.com",
-  linkedinUrl: "https://www.linkedin.com/in/debojyoti-saha",
+  linkedinUrl: "https://www.linkedin.com/in/debojyotisahatech/",
   year: "2026",
 };
 

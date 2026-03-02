@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteProfile } from '@/data/site';
+import { FaWhatsapp, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -45,14 +46,20 @@ export default function Footer() {
           
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
-            <p className="text-slate-400 mb-2">📱 WhatsApp: {siteProfile.phone}</p>
-            <p className="text-slate-400 mb-2">📧 Email: {siteProfile.email}</p>
-            <p className="text-slate-400">
-              🔗 LinkedIn:{" "}
+            <div className="flex items-center gap-2 text-slate-400 mb-3">
+              <FaWhatsapp className="text-xl" />
+              <span>WhatsApp: {siteProfile.phone}</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-400 mb-3">
+              <FaEnvelope className="text-xl" />
+              <span>Email: {siteProfile.email}</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-400">
+              <FaLinkedin className="text-xl" />
               <a href={siteProfile.linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition">
                 View Profile
               </a>
-            </p>
+            </div>
           </div>
         </div>
         
