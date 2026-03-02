@@ -50,27 +50,51 @@ export const blogPosts = [
 
 export const galleryItems = [
   {
+    title: "Microtome Service & Calibration",
+    category: "Laboratory Equipment",
+    description: "Efficient servicing, blade alignment, and precision calibration for rotary and sliding microtomes ensuring accurate tissue sectioning.",
+    icon: "🔬",
+  },
+  {
+    title: "Microscope Service & Maintenance",
+    category: "Optical Equipment",
+    description: "Complete optical cleaning, lens calibration, illumination adjustment, and mechanical repair for compound and surgical microscopes.",
+    icon: "🔍",
+  },
+  {
     title: "Critical Care Service Visit",
     category: "Hospital Support",
+    description: "On-site troubleshooting and repair of ICU ventilators, patient monitors, and critical care equipment.",
+    icon: "🏥",
   },
   {
     title: "Patient Monitor Calibration",
     category: "Calibration",
+    description: "Precision calibration of vital signs monitors including ECG, SpO2, NIBP, and temperature sensors.",
+    icon: "📊",
   },
   {
     title: "Physiotherapy Unit Troubleshooting",
     category: "Rehab Equipment",
+    description: "Repair and maintenance of ultrasound therapy, TENS units, and other physiotherapy devices.",
+    icon: "💪",
   },
   {
     title: "Clinic Website Setup",
     category: "IT Services",
+    description: "Professional website development, domain registration, and hosting solutions for healthcare facilities.",
+    icon: "💻",
   },
   {
     title: "Defibrillator Preventive Check",
     category: "Safety Compliance",
+    description: "Comprehensive preventive maintenance and safety testing of defibrillators and emergency equipment.",
+    icon: "⚡",
   },
   {
     title: "Equipment Performance Audit",
     category: "Quality Assurance",
+    description: "Detailed performance testing, documentation, and compliance verification for medical devices.",
+    icon: "✅",
   },
 ];

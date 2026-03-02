@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   title: "DS Biomedical & IT Services | Biomedical & IT Support",
   description: "Professional biomedical equipment maintenance, repair, calibration, AMC support, and IT solutions by Senior Biomedical Engineer Debojyoti Saha.",
   keywords: "biomedical engineer, medical equipment service, healthcare, maintenance, repair, calibration",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
