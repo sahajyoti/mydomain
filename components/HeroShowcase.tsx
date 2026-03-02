@@ -1,151 +1,113 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const frameClip = "polygon(24% 0%, 76% 0%, 100% 26%, 100% 74%, 76% 100%, 24% 100%, 0% 74%, 0% 26%)";
-const slides = [
-  "https://www.zuper.co/wp-content/uploads/2023/09/64be29c7157251d4d770313d_Medical-Equipment-Installation-Repair-and-Maintenance-copy.webp",
-  "https://5.imimg.com/data5/SELLER/Default/2021/6/XW/LJ/DL/49496493/medical-equipment-repair-service.jpg",
-  "https://content.jdmagicbox.com/comp/kolkata/z8/033pxx33.xx33.210428165619.u3z8/catalogue/sodexo-healthcare-technology-management-salt-lake-city-sector-5-kolkata-medical-equipment-repair-and-services-pkfkl2499r.jpg",
-  "https://www.colmed.in/pub/media/wysiwyg/medical_service.png",
-  "https://codeflies.com/wp-content/uploads/2019/09/blog-4.jpg",
-  "https://www.creative-tim.com/blog/content/images/size/w960/2022/01/which-development-job-is-right-for-you.jpg",
-];
-
-function DotGrid({ className }: { className: string }) {
-  return (
-    <div className={`grid grid-cols-3 gap-3 ${className}`}>
-      {Array.from({ length: 9 }).map((_, index) => (
-        <span key={index} className="h-4 w-4 rounded-full bg-white/95" />
-      ))}
-    </div>
-  );
-}
 
 export default function HeroShowcase() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length);
-    }, 3200);
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
-    <section className="relative min-h-screen sm:min-h-[80vh] overflow-hidden bg-black text-white">
-      <img
-        src={slides[active]}
-        alt="Hero background"
-        className="absolute inset-0 h-full w-full object-cover opacity-45 brightness-110 saturate-110 transition-opacity duration-700"
-      />
-      <div className="absolute inset-0 bg-black/35" />
-
+    <section className="relative min-h-screen sm:min-h-[80vh] bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-950 dark:to-emerald-950 text-slate-900 dark:text-white overflow-hidden">
+      {/* Background decorative elements - hidden on mobile */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="hidden sm:block absolute -left-20 -bottom-16 h-44 w-72 rotate-12 bg-green-500/70" />
-        <div className="hidden sm:block absolute right-0 top-0 h-28 w-64 bg-gradient-to-l from-green-500/50 to-transparent" />
-
-        <div className="hidden sm:block absolute right-16 top-0 h-full w-px bg-white/40 rotate-0" />
-        <div className="hidden sm:block absolute right-44 top-[-8%] h-[116%] w-px bg-white/50 rotate-[42deg]" />
-        <div className="hidden sm:block absolute right-2 top-[-8%] h-[116%] w-px bg-white/40 rotate-[-42deg]" />
-
-        <div className="hidden sm:block absolute right-36 top-10 h-28 w-20 rotate-[32deg] rounded-[2.5rem] border-3 border-white/95" />
-        <div className="hidden sm:block absolute right-[40%] top-16 h-28 w-20 -rotate-[32deg] rounded-[2.5rem] border-2 border-white/95" />
-        <div className="hidden sm:block absolute right-24 bottom-8 h-28 w-20 rotate-[28deg] rounded-[2.5rem] border-3 border-white/95" />
-
-        <DotGrid className="hidden sm:grid absolute left-14 top-10" />
-        <DotGrid className="hidden sm:grid absolute right-4 bottom-8" />
+        <div className="hidden lg:block absolute -left-32 -top-32 h-64 w-64 bg-emerald-400/10 rounded-full blur-3xl" />
+        <div className="hidden lg:block absolute -right-32 -bottom-32 h-80 w-80 bg-green-400/10 rounded-full blur-3xl" />
       </div>
 
-      <button
-        type="button"
-        className="hidden sm:block absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-r-2xl bg-green-700 px-4 py-3 text-2xl font-bold text-white"
-        aria-label="Previous"
-      >
-        ‹
-      </button>
-      <button
-        type="button"
-        className="hidden sm:block absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-l-2xl bg-green-700 px-4 py-3 text-2xl font-bold text-white"
-        aria-label="Next"
-      >
-        ›
-      </button>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center">
+            <div className="inline-block mb-4 sm:mb-6">
+              <p className="rounded-full bg-emerald-600/15 dark:bg-emerald-500/20 px-4 py-2 text-xs sm:text-sm font-semibold text-emerald-700 dark:text-emerald-300 w-fit">
+                ✓ Professional Services
+              </p>
+            </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
-          <div className="max-w-xl">
-            <p className="inline-block rounded-full bg-emerald-500/20 px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-emerald-300">
-              Senior Biomedical Engineer • IT Solutions
-            </p>
-
-            <h1 className="mt-3 sm:mt-5 text-2xl sm:text-4xl lg:text-6xl font-extrabold leading-tight sm:leading-[0.95] tracking-tight text-white">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight sm:leading-snug lg:leading-tight mb-4 sm:mb-6">
               Engineering Precision
-              <br />
-              in Healthcare
-              <br />
-              Technology
+              <br className="hidden sm:block" />
+              <span className="text-emerald-600 dark:text-emerald-400">in Healthcare</span>
             </h1>
 
-            <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-slate-200">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-700 dark:text-slate-300 mb-4 sm:mb-6 leading-relaxed">
               Professional Biomedical Equipment Service & IT Solutions by Debojyoti Saha
             </p>
 
-            <p className="mt-3 sm:mt-4 text-xs sm:text-base text-slate-300 leading-relaxed">
-              Delivering expert maintenance, repair, and calibration services for critical healthcare
-              equipment with a commitment to reliability, accuracy, and zero downtime.
+            <p className="text-xs sm:text-sm lg:text-base text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 leading-relaxed">
+              Expert maintenance, repair, and calibration services for critical healthcare equipment with commitment to reliability, accuracy, and zero downtime.
             </p>
 
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="rounded-xl bg-green-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-white hover:bg-green-500 text-center transition"
+                className="rounded-2xl bg-gradient-to-r from-emerald-600 to-green-600 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold text-white hover:from-emerald-700 hover:to-green-700 text-center transition shadow-lg hover:shadow-xl"
               >
-                Get Support Today
+                Get Support Today →
               </Link>
               <Link
                 href="/services"
-                className="rounded-xl border border-white/35 bg-white/10 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-white hover:bg-white/20 text-center transition"
+                className="rounded-2xl border-2 border-emerald-600 dark:border-emerald-400 bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold text-emerald-600 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-center transition"
               >
                 View Services
               </Link>
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-[470px]">
-            <div className="absolute right-[-28px] top-[-20px] h-[280px] w-[280px] sm:h-[350px] sm:w-[350px] lg:h-[430px] lg:w-[430px] rotate-[33deg] bg-gradient-to-b from-emerald-400/70 via-green-500/35 to-emerald-500/70" />
-            <div className="absolute right-[10px] top-[40px] h-14 w-14 sm:h-16 sm:w-16 lg:h-20 lg:w-20 rounded-full bg-yellow-300/85 blur-[1px]" />
+          {/* Right - Photo Frame */}
+          <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none lg:justify-self-end">
+            {/* Decorative background shapes - hidden on mobile */}
+            <div className="hidden sm:block absolute -right-12 -top-8 h-48 w-48 bg-gradient-to-br from-emerald-400/20 to-green-400/10 rounded-full blur-2xl" />
+            <div className="hidden sm:block absolute -right-20 -bottom-20  h-56 w-56 bg-gradient-to-tl from-green-300/15 to-transparent rounded-full blur-3xl" />
 
-            <div className="relative mx-auto h-[200px] w-[200px] sm:h-[280px] sm:w-[280px] lg:h-[410px] lg:w-[410px]">
+            {/* Top decorative dots */}
+            <div className="hidden md:flex absolute -top-6 right-8 gap-2">
+              <div className="h-2 w-2 rounded-full bg-emerald-400/60" />
+              <div className="h-2 w-2 rounded-full bg-emerald-400/40" />
+              <div className="h-2 w-2 rounded-full bg-emerald-400/20" />
+            </div>
+
+            {/* Main photo frame */}
+            <div className="relative mx-auto h-[260px] w-[260px] sm:h-[320px] sm:w-[320px] lg:h-[420px] lg:w-[420px] group">
+              {/* Decorative outer shapes */}
+              <div className="hidden sm:block absolute -inset-6 rounded-[3rem] border-2 border-emerald-300/30 dark:border-emerald-500/20 rotate-3 opacity-50" />
+              <div className="hidden sm:block absolute -inset-3 rounded-[2.5rem] border-2 border-emerald-200/40 dark:border-emerald-600/20 -rotate-2" />
+
+              {/* Frame layers */}
               <div
-                className="absolute inset-0 rotate-6 rounded-[2.6rem] bg-emerald-600/50"
+                className="absolute inset-0 rotate-3 rounded-[2.2rem] bg-gradient-to-br from-emerald-500 to-green-600/70 shadow-xl"
                 style={{ clipPath: frameClip }}
               />
               <div
-                className="absolute inset-2 -rotate-3 rounded-[2.6rem] bg-green-400/55"
+                className="absolute inset-1 -rotate-2 rounded-[2rem] bg-gradient-to-tr from-green-400/60 to-emerald-300/40"
                 style={{ clipPath: frameClip }}
               />
               <div
-                className="absolute inset-3 rounded-[2.4rem] border-4 border-white"
+                className="absolute inset-2 rounded-[1.8rem] border-4 border-white shadow-md"
                 style={{ clipPath: frameClip }}
               />
 
+              {/* Photo container */}
               <div
-                className="absolute inset-5 overflow-hidden rounded-[2.2rem]"
+                className="absolute inset-4 overflow-hidden rounded-[1.6rem] shadow-inner"
                 style={{ clipPath: frameClip }}
               >
                 <img
                   src="/home-hero-student.jpeg"
-                  alt="Hero photo"
+                  alt="Professional portrait"
                   className="h-full w-full object-cover object-top"
                 />
               </div>
+
+              {/* Decorative accent */}
+              <div className="hidden md:block absolute -bottom-4 -right-4 h-16 w-16 rounded-full bg-gradient-to-tl from-yellow-300 to-yellow-200/40 shadow-lg blur-xl opacity-70" />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom decorative line - mobile only */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400/0 via-emerald-400/40 to-emerald-400/0" />
     </section>
   );
 }
