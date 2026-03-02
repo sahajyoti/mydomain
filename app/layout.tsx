@@ -28,10 +28,11 @@ export const metadata: Metadata = {
   keywords: "biomedical engineer, medical equipment service, healthcare, maintenance, repair, calibration",
   icons: {
     icon: [
-      { url: '/favicon.ico' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/logo-new.png', type: 'image/png', sizes: '512x512' },
     ],
-    apple: '/favicon.svg',
+    apple: '/logo-new.png',
+    shortcut: '/favicon.svg',
   },
 };
 
