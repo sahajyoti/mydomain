@@ -7,19 +7,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-emerald-200/40 bg-white/95 dark:border-emerald-800/40 dark:bg-slate-950/95 backdrop-blur">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex justify-between items-center h-14 sm:h-16 gap-4">
+        <div className="relative flex justify-between items-center h-16 sm:h-20 lg:h-24 gap-4">
           <Link href="/" className="flex items-center gap-2 min-w-0 shrink-0 group">
-            <div className="relative h-10 w-10 sm:h-12 sm:w-12 overflow-hidden flex items-center justify-center">
+            <div className="relative h-14 w-14 sm:h-16 sm:w-16 lg:h-20 lg:w-20 overflow-hidden flex items-center justify-center flex-shrink-0">
               <Image
                 src="/file_000000000a607208a8ac6109a01e508c-removebg-preview.png"
                 alt="DS Biomedical logo"
                 fill
                 priority
-                sizes="(max-width: 640px) 40px, 48px"
-                className="object-contain object-center scale-100 group-hover:scale-110 transition"
+                sizes="(max-width: 640px) 56px, (max-width: 1024px) 64px, 80px"
+                className="object-contain object-center scale-100 group-hover:scale-125 transition"
               />
             </div>
-            <span className="hidden sm:inline text-xs sm:text-sm font-bold text-slate-900 dark:text-white max-w-[120px] truncate">
+            <span className="hidden lg:inline text-sm font-bold text-slate-900 dark:text-white max-w-[140px] truncate">
               DS Biomedical
             </span>
           </Link>
