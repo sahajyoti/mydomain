@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { blogPosts, testimonials } from "@/data/site";
 import HeroShowcase from "@/components/HeroShowcase";
+import ClientShowcase from "@/components/ClientShowcase";
 
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100">
       <HeroShowcase />
+
+      {/* Clients & Services Section */}
+      <ClientShowcase />
 
       {/* Services Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
