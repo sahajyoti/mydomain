@@ -1,0 +1,70 @@
+import Link from 'next/link';
+import { siteProfile } from '@/data/site';
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-2xl font-bold text-cyan-400 mb-2">{siteProfile.brand}</h3>
+            <p className="text-slate-400">{siteProfile.role} – {siteProfile.owner}</p>
+            <p className="text-slate-400 text-sm mt-2">Biomedical Equipment Maintenance & IT Solutions</p>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-slate-400">
+              <li>
+                <Link href="/about" className="hover:text-cyan-400 transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-cyan-400 transition">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-cyan-400 transition">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-cyan-400 transition">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-cyan-400 transition">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <p className="text-slate-400 mb-2">📱 WhatsApp: {siteProfile.phone}</p>
+            <p className="text-slate-400 mb-2">📧 Email: {siteProfile.email}</p>
+            <p className="text-slate-400">
+              🔗 LinkedIn:{" "}
+              <a href={siteProfile.linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition">
+                View Profile
+              </a>
+            </p>
+          </div>
+        </div>
+        
+        <div className="border-t border-slate-800 pt-6">
+          <p className="text-center text-slate-400 text-sm">
+            © {siteProfile.year} {siteProfile.brand}. All Rights Reserved.
+          </p>
+          <p className="text-center text-slate-400 text-sm mt-2">
+            Providing trusted service support for hospitals, clinics, physiotherapy centers, and healthcare facilities.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
