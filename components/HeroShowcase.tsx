@@ -1,13 +1,37 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const frameClip = "polygon(24% 0%, 76% 0%, 100% 26%, 100% 74%, 76% 100%, 24% 100%, 0% 74%, 0% 26%)";
+const slides = [
+  "https://www.zuper.co/wp-content/uploads/2023/09/64be29c7157251d4d770313d_Medical-Equipment-Installation-Repair-and-Maintenance-copy.webp",
+  "https://5.imimg.com/data5/SELLER/Default/2021/6/XW/LJ/DL/49496493/medical-equipment-repair-service.jpg",
+  "https://content.jdmagicbox.com/comp/kolkata/z8/033pxx33.xx33.210428165619.u3z8/catalogue/sodexo-healthcare-technology-management-salt-lake-city-sector-5-kolkata-medical-equipment-repair-and-services-pkfkl2499r.jpg",
+  "https://www.colmed.in/pub/media/wysiwyg/medical_service.png",
+  "https://codeflies.com/wp-content/uploads/2019/09/blog-4.jpg",
+  "https://www.creative-tim.com/blog/content/images/size/w960/2022/01/which-development-job-is-right-for-you.jpg",
+];
 
 export default function HeroShowcase() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((prev) => (prev + 1) % slides.length);
+    }, 3200);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative min-h-screen sm:min-h-[80vh] bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-950 dark:to-emerald-950 text-slate-900 dark:text-white overflow-hidden">
+      {/* Background Image with Auto-scroll */}
+      <img
+        src={slides[active]}
+        alt="Hero background"
+        className="absolute inset-0 h-full w-full object-cover opacity-30 dark:opacity-20 transition-opacity duration-700"
+      />
       {/* Background decorative elements - hidden on mobile */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="hidden lg:block absolute -left-32 -top-32 h-64 w-64 bg-emerald-400/10 rounded-full blur-3xl" />
