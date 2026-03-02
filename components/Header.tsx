@@ -7,19 +7,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-emerald-200/40 bg-white/95 dark:border-emerald-800/40 dark:bg-slate-950/95 backdrop-blur">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex justify-between items-center h-20 sm:h-24 lg:h-28 gap-4">
-          <Link href="/" className="flex items-center gap-2 min-w-0 shrink-0 group">
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 overflow-hidden flex items-center justify-center flex-shrink-0 rounded-lg bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-900/30 dark:to-green-900/30 border border-emerald-200/50 dark:border-emerald-800/50 shadow-sm">
+        <div className="relative flex justify-between items-center h-28 sm:h-32 lg:h-40 gap-4">
+          <Link href="/" className="flex items-center gap-3 min-w-0 shrink-0 group">
+            <div className="relative h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48 overflow-hidden flex items-center justify-center flex-shrink-0">
               <Image
                 src="/file_000000000a607208a8ac6109a01e508c-removebg-preview.png"
                 alt="DS Biomedical logo"
                 fill
                 priority
-                sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
-                className="object-contain object-center scale-95 group-hover:scale-110 transition-transform duration-300 p-2"
+                sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 192px"
+                className="object-contain object-center scale-100 group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <span className="hidden lg:inline text-sm font-bold text-slate-900 dark:text-white max-w-[140px] truncate">
+            <span className="hidden xl:inline text-base font-bold text-slate-900 dark:text-white max-w-[160px] truncate">
               DS Biomedical
             </span>
           </Link>

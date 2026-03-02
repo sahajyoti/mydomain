@@ -43,7 +43,7 @@ export default function MobileMenu() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-20 sm:top-24 bg-black/20 dark:bg-black/40 backdrop-blur-sm md:hidden z-40" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 top-28 sm:top-32 bg-black/20 dark:bg-black/40 backdrop-blur-sm md:hidden z-40" onClick={() => setIsOpen(false)} />
       )}
 
       {/* Mobile Menu */}

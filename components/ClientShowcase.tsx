@@ -31,7 +31,7 @@ const clients = [
 
 export default function ClientShowcase() {
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-slate-900 dark:to-emerald-950/20 border-y border-emerald-200/40 dark:border-emerald-800/30 py-12 sm:py-16 lg:py-20">
+    <section className="border-y border-emerald-200/40 dark:border-emerald-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-10 sm:mb-14 lg:mb-16 text-center">

@@ -2,17 +2,21 @@ import Link from "next/link";
 import { blogPosts, testimonials } from "@/data/site";
 import HeroShowcase from "@/components/HeroShowcase";
 import ClientShowcase from "@/components/ClientShowcase";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100">
+    <main className="text-slate-900 dark:text-slate-100">
       <HeroShowcase />
 
       {/* Clients & Services Section */}
-      <ClientShowcase />
+      <AnimatedBackground variant="emerald" className="py-12 sm:py-16 lg:py-20">
+        <ClientShowcase />
+      </AnimatedBackground>
 
       {/* Services Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <AnimatedBackground variant="blue" className="py-12 sm:py-16 lg:py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <article className="rounded-2xl bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 border border-emerald-200/50 dark:border-emerald-800/30 p-6 sm:p-8 shadow-sm hover:shadow-md transition">
             <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-3">⚕️</div>
@@ -37,9 +41,11 @@ export default function Home() {
           </article>
         </div>
       </section>
+      </AnimatedBackground>
 
       {/* Testimonials Section */}
-      <section className="bg-gradient-to-r from-emerald-50 to-green-50 dark:from-slate-800 dark:to-slate-900 py-12 sm:py-16 lg:py-20">
+      <AnimatedBackground variant="emerald" className="py-12 sm:py-16 lg:py-20">
+        <section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">Testimonials</h2>
@@ -60,9 +66,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedBackground>
 
       {/* Blog Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <AnimatedBackground variant="purple" className="py-12 sm:py-16 lg:py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">Latest Blog</h2>
           <Link href="/blog" className="text-sm sm:text-base font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition whitespace-nowrap">
@@ -81,9 +89,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </AnimatedBackground>
 
       {/* Gallery Section */}
-      <section className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-700 dark:to-green-700 text-white py-12 sm:py-16 lg:py-20">
+      <AnimatedBackground variant="gradient" className="py-12 sm:py-16 lg:py-20">
+        <section className="text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
             <div className="flex-1">
@@ -96,6 +106,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedBackground>
     </main>
   );
 }
