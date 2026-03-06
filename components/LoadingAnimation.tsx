@@ -45,45 +45,45 @@ export default function LoadingAnimation() {
       }`}
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-20 -left-12 h-72 w-72 rounded-full bg-emerald-400/10 blur-3xl" />
-        <div className="absolute -bottom-16 -right-8 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="absolute -top-20 -left-12 h-32 w-32 sm:h-72 sm:w-72 rounded-full bg-emerald-400/10 blur-3xl" />
+        <div className="absolute -bottom-16 -right-8 h-32 w-32 sm:h-80 sm:w-80 rounded-full bg-cyan-400/10 blur-3xl" />
       </div>
 
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-4 sm:gap-8 px-4 sm:px-0">
         {/* Logo Animation */}
         <div className="relative">
-          {/* Skill badges - positioned around circle */}
+          {/* Skill badges - positioned around circle (hidden on mobile) */}
           {/* Top */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-32 flex items-center gap-2 rounded-full border border-blue-300/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-200 animate-float animation-delay-150">
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-32 items-center gap-2 rounded-full border border-blue-300/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-200 animate-float animation-delay-150">
             <FaCode className="text-blue-300" /> Code
           </div>
           {/* Top-left */}
-          <div className="absolute -left-32 -top-12 flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200 animate-float animation-delay-300">
+          <div className="hidden md:flex absolute -left-32 -top-12 items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200 animate-float animation-delay-300">
             <FaHtml5 className="text-orange-300" /> HTML
           </div>
           {/* Left */}
-          <div className="absolute -left-36 top-1/2 -translate-y-1/2 flex items-center gap-2 rounded-full border border-yellow-300/30 bg-yellow-500/10 px-3 py-1 text-xs font-semibold text-yellow-200 animate-float animation-delay-500">
+          <div className="hidden md:flex absolute -left-36 top-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-yellow-300/30 bg-yellow-500/10 px-3 py-1 text-xs font-semibold text-yellow-200 animate-float animation-delay-500">
             <FaJsSquare className="text-yellow-300" /> JS
           </div>
           {/* Right */}
-          <div className="absolute -right-40 top-1/4 flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-200 animate-float animation-delay-700">
+          <div className="hidden md:flex absolute -right-40 top-1/4 items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-200 animate-float animation-delay-700">
             <FaCss3Alt className="text-cyan-300" /> CSS
           </div>
           {/* Bottom-right */}
-          <div className="absolute -right-32 top-2/3 flex items-center gap-2 rounded-full border border-green-300/30 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-200 animate-float animation-delay-300">
+          <div className="hidden md:flex absolute -right-32 top-2/3 items-center gap-2 rounded-full border border-green-300/30 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-200 animate-float animation-delay-300">
             <FaNodeJs className="text-green-300" /> Node.js
           </div>
           {/* Bottom */}
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-48 flex items-center gap-2 rounded-full border border-violet-300/30 bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-200 animate-float animation-delay-500">
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -bottom-48 items-center gap-2 rounded-full border border-violet-300/30 bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-200 animate-float animation-delay-500">
             <FaMicroscope className="text-violet-300" /> Microscope
           </div>
 
           {/* Animated rings */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-48 h-48 rounded-full border-4 border-white/20 animate-ping"></div>
+            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-white/20 animate-ping"></div>
           </div>
           <div className="absolute inset-0 flex items-center justify-center animation-delay-150">
-            <div className="w-56 h-56 rounded-full border-4 border-white/10 animate-ping"></div>
+            <div className="w-40 h-40 sm:w-56 sm:h-56 rounded-full border-4 border-white/10 animate-ping"></div>
           </div>
           
           {/* Main logo container */}
@@ -112,7 +112,7 @@ export default function LoadingAnimation() {
         </div>
 
         {/* Loading bar */}
-        <div className="w-64 h-1.5 bg-slate-700/50 rounded-full overflow-hidden animate-fade-in animation-delay-700">
+        <div className="w-48 sm:w-64 h-1.5 bg-slate-700/50 rounded-full overflow-hidden animate-fade-in animation-delay-700">
           <div className="h-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 rounded-full animate-loading-bar-continuous"></div>
         </div>
       </div>
