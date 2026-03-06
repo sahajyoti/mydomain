@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PointerTrail from "@/components/PointerTrail";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,10 +48,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
+        <LoadingAnimation />
         <PointerTrail />
         <Header />
         {children}
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

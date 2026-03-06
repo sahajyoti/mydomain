@@ -4,12 +4,19 @@ export default function Services() {
       title: "🔹 Critical Care Equipment",
       items: [
         "ECG Machines",
-        "Ventilators",
         "Patient Monitors",
-        "Dialysis Units",
         "Infusion Pumps"
       ],
       description: "Comprehensive servicing, troubleshooting, preventive maintenance, and calibration to ensure patient safety and machine accuracy."
+    },
+    {
+      title: "🔹 Laboratory Equipment",
+      items: [
+        "Microscope Service & Maintenance",
+        "Microtome Service & Calibration",
+        "Laboratory Optical Equipment"
+      ],
+      description: "Precision servicing, optical cleaning, lens calibration, and maintenance for laboratory diagnostic equipment."
     },
     {
       title: "🔹 Physiotherapy Equipment",
@@ -53,10 +60,10 @@ export default function Services() {
           Precision repair, calibration, preventive maintenance, and AMC support for multi-brand equipment.
         </p>
         <p className="text-sm sm:text-base lg:text-lg font-semibold text-amber-600 dark:text-amber-400 mb-8 sm:mb-12">
-          Note: CT, MRI, and X-Ray systems are excluded.
+          Note: CT, MRI, X-Ray systems, Ventilators, and Dialysis Units are excluded.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
           {biomedicalServices.map((service, index) => (
             <div key={index} className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 p-6 sm:p-8 rounded-lg shadow-lg">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">

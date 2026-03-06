@@ -3,6 +3,8 @@ import { blogPosts, testimonials } from "@/data/site";
 import HeroShowcase from "@/components/HeroShowcase";
 import ClientShowcase from "@/components/ClientShowcase";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import HomeTestimonials from "@/components/HomeTestimonials";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
       </AnimatedBackground>
 
       {/* LinkedIn Profile Section */}
+      <ScrollAnimation animation="fade-up">
       <section className="border-y border-blue-200/40 dark:border-blue-800/30 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
@@ -45,10 +48,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
 
       {/* Services Section */}
       <AnimatedBackground variant="blue" className="py-12 sm:py-16 lg:py-20">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollAnimation animation="fade-up-scale">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <article className="rounded-2xl bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 border border-emerald-200/50 dark:border-emerald-800/30 p-6 sm:p-8 shadow-sm hover:shadow-md transition">
             <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-3">⚕️</div>
@@ -72,43 +77,27 @@ export default function Home() {
             </Link>
           </article>
         </div>
+        </ScrollAnimation>
       </section>
       </AnimatedBackground>
 
       {/* Testimonials Section */}
       <AnimatedBackground variant="emerald" className="py-12 sm:py-16 lg:py-20">
-        <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">Testimonials</h2>
-            <Link href="/testimonials" className="text-sm sm:text-base font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition whitespace-nowrap">
-              View All →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {testimonials.map((item) => (
-              <article
-                key={item.name}
-                className="rounded-xl bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition border border-slate-200/50 dark:border-slate-700/50"
-              >
-                <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 italic">"{item.quote}"</p>
-                <p className="mt-4 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400">— {item.name}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        <HomeTestimonials />
       </AnimatedBackground>
 
       {/* Blog Section */}
       <AnimatedBackground variant="purple" className="py-12 sm:py-16 lg:py-20">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollAnimation animation="fade-up">
         <div className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white">Latest Blog</h2>
           <Link href="/blog" className="text-sm sm:text-base font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition whitespace-nowrap">
             Read More →
           </Link>
         </div>
+        </ScrollAnimation>
+        <ScrollAnimation animation="fade-up-scale" delay={100}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {blogPosts.map((post) => (
             <article key={post.title} className="rounded-xl bg-white dark:bg-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition border border-slate-200/50 dark:border-slate-700/50 group">
@@ -120,12 +109,14 @@ export default function Home() {
             </article>
           ))}
         </div>
+        </ScrollAnimation>
       </section>
       </AnimatedBackground>
 
       {/* Gallery Section */}
       <AnimatedBackground variant="gradient" className="py-12 sm:py-16 lg:py-20">
         <section className="text-white">
+        <ScrollAnimation animation="zoom-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
             <div className="flex-1">
@@ -137,6 +128,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        </ScrollAnimation>
       </section>
       </AnimatedBackground>
     </main>

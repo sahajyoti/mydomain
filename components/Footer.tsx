@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-cyan-400 mb-2">{siteProfile.brand}</h3>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-2 animate-pulse">{siteProfile.brand}</h3>
             <p className="text-slate-400">{siteProfile.role} – {siteProfile.owner}</p>
-            <p className="text-slate-400 text-sm mt-2">Biomedical Equipment Maintenance & IT Solutions</p>
+            <p className="text-slate-300 text-sm mt-2 font-medium">Biomedical Equipment Maintenance & IT Solutions</p>
           </div>
           
           <div>

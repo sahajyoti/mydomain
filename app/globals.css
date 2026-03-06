@@ -56,3 +56,55 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+/* Scroll Animation Styles */
+.scroll-fade-up,
+.scroll-fade-in,
+.scroll-slide-left,
+.scroll-slide-right,
+.scroll-zoom-in,
+.scroll-fade-up-scale {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-fade-up {
+  transform: translateY(40px);
+}
+
+.scroll-fade-in {
+  transform: none;
+}
+
+.scroll-slide-left {
+  transform: translateX(60px);
+}
+
+.scroll-slide-right {
+  transform: translateX(-60px);
+}
+
+.scroll-zoom-in {
+  transform: scale(0.8);
+}
+
+.scroll-fade-up-scale {
+  transform: translateY(40px) scale(0.95);
+}
+
+.scroll-fade-up.animate-in,
+.scroll-fade-in.animate-in,
+.scroll-slide-left.animate-in,
+.scroll-slide-right.animate-in,
+.scroll-zoom-in.animate-in,
+.scroll-fade-up-scale.animate-in {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Stagger animation delays */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
