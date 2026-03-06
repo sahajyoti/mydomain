@@ -70,7 +70,7 @@ export default function LoadingAnimation() {
             <FaCss3Alt className="text-cyan-300" /> CSS
           </div>
           {/* Bottom-right */}
-          <div className="absolute -right-32 -bottom-12 flex items-center gap-2 rounded-full border border-green-300/30 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-200 animate-float animation-delay-300">
+          <div className="absolute -right-32 top-2/3 flex items-center gap-2 rounded-full border border-green-300/30 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-200 animate-float animation-delay-300">
             <FaNodeJs className="text-green-300" /> Node.js
           </div>
           {/* Bottom */}
